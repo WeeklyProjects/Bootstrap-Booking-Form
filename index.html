@@ -5,158 +5,155 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="main.js"></script>
     </head>
     <body>
         <h1>Bootstrap Booking Form:</h1>
         <div class="well">
             <p>Fill out the form and click the submit button when complete...</p>
         </div>
-        <form>
+        <form class="needs-validation" novalidate>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="well" id="left-well">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h4>User:</h4>
-                                </div>
-                                <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-xs-2">
-                                                <label for="username" class="col-form-label">Username:</label>
-                                            </div>
-                                            <div class="col-xs-10">
-                                                <input type="text" id="username" name="username" class="form-control" placeholder="Type username...">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2">
-                                                <label for="first-name" class="col-form-label">First name:</label>
-                                            </div>
-                                            <div class="col-xs-10">
-                                                <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Type first name...">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-2">
-                                                <label for="last-name" class="col-form-label">Last name:</label>
-                                            </div>
-                                            <div class="col-xs-10">
-                                                <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Type last name...">
-                                            </div>
-                                        </div>
-                                </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>User:</h4>
                             </div>
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h4>Contact:</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-phone"></i>
-                                        </span>
-                                        <input type="text" id="phone#" class="form-control" placeholder="Type phone#...">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-fax"></i>
-                                        </span>
-                                        <input type="text" id="fax#" class="form-control" placeholder="Type fax#...">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-envelope"></i>
-                                        </span>
-                                        <input type="text" id="email" class="form-control" placeholder="Type email...">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h4>Schedule:</h4>
-                                </div>
-                                <div class="panel-body">
+                            <div class="panel-body">
                                     <div class="row">
                                         <div class="col-xs-2">
-                                            <label for="adults#" class="form-label">Adults:</label>
+                                            <label for="username" class="col-form-label">Username:</label>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <input type="text" id="username" name="username" class="form-control" placeholder="Type username..." required>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-12">
-                                            <select class="form-select" id="adults#">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
+                                        <div class="col-xs-2">
+                                            <label for="first-name" class="col-form-label">First name:</label>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Type first name..." required>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-6">
-                                            <label for="check-in" class="form-label">Check-In:</label>
-                                            <input type="date" id="check-in" class="form-control">
+                                        <div class="col-xs-2">
+                                            <label for="last-name" class="col-form-label">Last name:</label>
                                         </div>
-                                        <div class="col-xs-6">
-                                            <label for="check-out" class="form-label">Check-Out:</label>
-                                            <input type="date" id="check-out" class="form-control">
+                                        <div class="col-xs-10">
+                                            <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Type last name..." required>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <label for="days" class="form-label">Days:</label>
-                                            <input type="text" id="days" class="form-control" placeholder="Displays days..." readonly>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <label for="cost" class="form-label">Cost($)</label>
-                                            <input type="text" id="cost" class="form-control" placeholder="Displays cost..." readonly>
-                                        </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>Contact:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-phone"></i>
+                                    </span>
+                                    <input type="text" id="phone#" class="form-control" placeholder="Type phone#..." required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-fax"></i>
+                                    </span>
+                                    <input type="text" id="fax#" class="form-control" placeholder="Type fax#..." required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <input type="text" id="email" class="form-control" placeholder="Type email..." required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>Schedule:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <label for="adults#" class="form-label">Adults:</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <select class="form-select" id="adults#">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <label for="check-in" class="form-label">Check-In:</label>
+                                        <input type="date" id="check-in" class="form-control">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <label for="check-out" class="form-label">Check-Out:</label>
+                                        <input type="date" id="check-out" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <label for="days" class="form-label">Days:</label>
+                                        <input type="text" id="days" class="form-control" placeholder="Displays days..." readonly>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <label for="cost" class="form-label">Cost($)</label>
+                                        <input type="text" id="cost" class="form-control" placeholder="Displays cost..." readonly>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-6">
-                        <div class="well" id="right-well">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h4>Other:</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <label for="message" class="form-label">Message:</label>
-                                    <textarea class="form-control" id="message" placeholder="Type message here..." rows="22"></textarea>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <label for="range" class="form-label">Range:</label>
-                                            <input type="range" class="form-range" id="range" min="0" max="10" steps="1">
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <label for="priority" class="form-label">Priority:</label>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <input class="form-check-input" type="radio" name="priority" id="low-priority">
-                                            <label class="form-check-label" for="low-priority">Low</label>
-                                            <input class="form-check-input" type="radio" name="priority" id="med-priority">
-                                            <label class="form-check-label" for="med-priority">Med</label>
-                                            <input class="form-check-input" type="radio" name="priority" id="high-priority">
-                                            <label class="form-check-label" for="high-priority">High</label>
-                                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>Other:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <label for="message" class="form-label">Message:</label>
+                                <textarea class="form-control" id="message" placeholder="Type message here..." rows="22"></textarea>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label for="range" class="form-label">Range:</label>
+                                        <input type="range" class="form-range" id="range" min="0" max="10" steps="1">
                                     </div>
                                 </div>
+                                <br>
+                                <label for="priority" class="form-label">Priority:</label>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input class="form-check-input" type="radio" name="priority" id="low-priority">
+                                        <label class="form-check-label" for="low-priority">Low</label>
+                                        <input class="form-check-input" type="radio" name="priority" id="med-priority">
+                                        <label class="form-check-label" for="med-priority">Med</label>
+                                        <input class="form-check-input" type="radio" name="priority" id="high-priority">
+                                        <label class="form-check-label" for="high-priority">High</label>
+                                    </div>
+                                </div>
+                                <br>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2">
-                        <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Submit</button>
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-5">
+                                <button type="reset" class="btn btn-block btn-primary"><i class="fa fa-eraser"></i> Reset</button>
+                            </div>
+                            <div class="col-xs-5">
+                                <button type="submit" class="btn btn-block btn-success"><i class="fa fa-paper-plane"></i> Submit</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
